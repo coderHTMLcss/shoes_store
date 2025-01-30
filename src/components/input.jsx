@@ -4,6 +4,7 @@ import { useFilter } from '../context/productContext';
 const Input = ({ title, type = "radio", value, name, color, className = "", style = {} }) => {
 
     const { handleFilterChange } = useFilter();
+    console.log(value);
 
     return (
         <label className={`sidebar-label-container ${className}`}>
@@ -14,9 +15,12 @@ const Input = ({ title, type = "radio", value, name, color, className = "", styl
                 name={name}
                 aria-label={title}
             />
-            <span style={{ backgroundColor: color, ...style }} className="checkmark"></span>
+            <span
+                style={{ backgroundColor: color, ...style }}
+                className={`checkmark ${name === 'color' && value === '' ? ' all' : ''}`}>
+            </span>
             {title}
-        </label>
+        </label >
     );
 };
 

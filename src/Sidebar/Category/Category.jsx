@@ -2,13 +2,13 @@ import Input from '../../components/input';
 import './style.css';
 
 const Category = () => {
-    const categories = ['All', 'Sneakers', 'Flats', 'Sandals', 'Heels',
+    const categories = [
         { value: '', title: 'All' },
         { value: 'sneakers', title: 'Sneakers' },
         { value: 'flats', title: 'Flats' },
         { value: 'sandals', title: 'Sandals' },
         { value: 'heels', title: 'Heels' },
-    ];
+    ]; 
 
     return (
         <div>
